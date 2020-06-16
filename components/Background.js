@@ -1,13 +1,6 @@
 import React from "react";
 import { View, StyleSheet, ImageBackground } from "react-native";
 
-const styles = StyleSheet.create({
-  imageBackground: {
-    height: "100%",
-    width: "100%",
-  },
-});
-
 const BackgroundImage = (props) => {
   return (
     <ImageBackground
@@ -19,5 +12,12 @@ const BackgroundImage = (props) => {
     </ImageBackground>
   );
 };
+
+const styles = StyleSheet.create({
+  imageBackground: {
+    height: "100%",
+    width: "100%",
+  },
+});
 
 export default BackgroundImage;

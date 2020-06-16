@@ -1,6 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
+function Avatar({ displayPicture, name, style }) {
+  return (
+    <View style={style}>
+      <View style={styles.avatar} />
+      <Text style={styles.title}>{name}</Text>
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   avatar: {
     borderRadius: 56,
@@ -18,14 +27,5 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
 });
-
-function Avatar({ displayPicture, name, style }) {
-  return (
-    <View style={style}>
-      <View style={styles.avatar} />
-      <Text style={styles.title}>{name}</Text>
-    </View>
-  );
-}
 
 export default Avatar;

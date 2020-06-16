@@ -6,13 +6,6 @@ import BackgroundImage from "../components/Background";
 import ProductLabel from "../components/ProductLabel";
 import Avatar from "../components/Avatar";
 
-const styles = StyleSheet.create({
-  avatar: {
-    alignItems: "center",
-    paddingTop: 60,
-  },
-});
-
 const data = [
   {
     title: "Moonstone Keychain",
@@ -30,13 +23,7 @@ function Weareable() {
   const insets = useSafeArea();
   return (
     <BackgroundImage>
-      <View
-        style={{
-          flex: 1,
-          paddingTop: insets.top,
-          alignItems: "center",
-        }}
-      >
+      <View style={[styles.container, { paddingTop: insets.top }]}>
         <Avatar style={styles.avatar} name="Edward Romero" />
         <ProductLabel count={data.length} containerStyle={{ marginTop: 15 }} />
         <AnimatedCarousel data={data} />
@@ -44,5 +31,16 @@ function Weareable() {
     </BackgroundImage>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+  },
+  avatar: {
+    alignItems: "center",
+    paddingTop: 60,
+  },
+});
 
 export default Weareable;
