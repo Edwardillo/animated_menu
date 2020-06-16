@@ -13,12 +13,12 @@ function CarouselSlide({ item, isActive }) {
         resizeMode="contain"
       />
       <View style={styles.cardContent}>
-        <AninmatedText style={styles.title} status={isActive}>
+        <AnimatedText style={styles.title} status={isActive}>
           {title}
-        </AninmatedText>
-        <AninmatedText style={styles.description} status={isActive}>
+        </AnimatedText>
+        <AnimatedText style={styles.description} status={isActive}>
           {description}
-        </AninmatedText>
+        </AnimatedText>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>View</Text>
         </TouchableOpacity>
