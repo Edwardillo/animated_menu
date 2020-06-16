@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   avatar: {
     alignItems: "center",
-    paddingTop: 60,
+    paddingTop: 30,
   },
 });
 

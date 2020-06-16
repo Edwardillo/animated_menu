@@ -20,7 +20,7 @@ function AnimatedCarousel({ data }) {
 
   return (
     <View>
-      <AnimatedView style={{ height: 400 }} animation="fadeInRight">
+      <AnimatedView style={{ height: 550 }} animation="fadeInRight">
         <Carousel
           ref={ref}
           data={data}

@@ -4,6 +4,7 @@ import { AnimatedImage, AnimatedText } from "./AnimatedComponents";
 
 function CarouselSlide({ item, isActive }) {
   const { image, title, description } = item;
+
   return (
     <View style={styles.card}>
       <AnimatedImage
@@ -29,6 +30,7 @@ function CarouselSlide({ item, isActive }) {
 
 const styles = StyleSheet.create({
   card: {
+    height: 350,
     width: 250,
     alignItems: "center",
     marginTop: 70,
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
   },
   cardContent: {
     backgroundColor: "#FFFFFF",
-    height: 300,
+    height: "100%",
     borderRadius: 20,
     paddingTop: 35,
     marginHorizontal: 15,
