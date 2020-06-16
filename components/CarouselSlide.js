@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
-import { AnimatedImage, AninmatedText } from "./AnimatedComponents";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { AnimatedImage, AnimatedText } from "./AnimatedComponents";
 
 function CarouselSlide({ item, isActive }) {
   const { image, title, description } = item;
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     width: 150,
     position: "absolute",
     top: -50,
-    zIndex: 1,
+    zIndex: 3,
   },
   cardContent: {
     backgroundColor: "#FFFFFF",

@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, TouchableOpacity } from "react-native";
 import { AnimatedView } from "./AnimatedComponents";
+import { MaterialIcons } from "@expo/vector-icons";
 
 function AnimatedTabBar({ state, descriptors, navigation }) {
   return (
@@ -16,13 +17,7 @@ function AnimatedTabBar({ state, descriptors, navigation }) {
     >
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
-        const label =
-          options.tabBarLabel !== undefined
-            ? options.tabBarLabel
-            : options.title !== undefined
-            ? options.title
-            : route.name;
-
+        const label = options.tabBarLabel || options.title || route.name;
         const isFocused = state.index === index;
 
         const onPress = () => {
@@ -37,6 +32,8 @@ function AnimatedTabBar({ state, descriptors, navigation }) {
           }
         };
 
+        const color = isFocused ? "#000000" : "#a0a9b8";
+
         return (
           <TouchableOpacity
             key={index}
@@ -45,10 +42,10 @@ function AnimatedTabBar({ state, descriptors, navigation }) {
               flex: 1,
               alignItems: "center",
             }}
+            w
           >
-            <Text style={{ color: isFocused ? "#000000" : "#a0a9b8" }}>
-              {label}
-            </Text>
+            <MaterialIcons name={options.iconName} size={24} color={color} />
+            <Text style={{ color }}>{label}</Text>
           </TouchableOpacity>
         );
       })}

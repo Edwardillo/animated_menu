@@ -5,7 +5,7 @@ function ProductLabel({ count, containerStyle }) {
   return (
     <View style={{ ...styles.container, ...containerStyle }}>
       <Text style={styles.text}>{`You have ${count} Product${
-        count === 1 || "s"
+        count === 1 ? "" : "s"
       }`}</Text>
     </View>
   );

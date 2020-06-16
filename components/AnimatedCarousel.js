@@ -29,6 +29,7 @@ function AnimatedCarousel({ data }) {
           sliderWidth={SLIDER_WIDTH}
           itemWidth={ITEM_WIDTH}
           inactiveSlideOpacity={1}
+          useScrollView
         />
       </AnimatedView>
       <Pagination activeSlide={activeSlide} dotsLength={data.length} />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import * as Animatable from "react-native-animatable";
 
-export function AninmatedText({ children, style, status, duration = 1000 }) {
+export function AnimatedText({ children, style, status, duration = 1000 }) {
   const [isActive, setActive] = useState(false);
   const ref = useRef(null);
 

@@ -26,9 +26,27 @@ export default function App() {
     <SafeAreaProvider>
       <NavigationContainer>
         <Tab.Navigator tabBar={AnimatedTabBar}>
-          <Tab.Screen name="Wearables" component={Weareable} />
-          <Tab.Screen name="Profile" component={BlankScreen} />
-          <Tab.Screen name="Help" component={BlankScreen} />
+          <Tab.Screen
+            name="Wearables"
+            component={Weareable}
+            options={{
+              iconName: "widgets",
+            }}
+          />
+          <Tab.Screen
+            name="Profile"
+            component={BlankScreen}
+            options={{
+              iconName: "face",
+            }}
+          />
+          <Tab.Screen
+            name="Help"
+            component={BlankScreen}
+            options={{
+              iconName: "help-outline",
+            }}
+          />
         </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
